@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VAMOO | تعلّم الإسبانية</title>
+<style>
+:root{--navy:#172554;--blue:#2563eb;--yellow:#fbbf24;--bg:#f5f7fb;--ink:#172033}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+header{background:linear-gradient(120deg,#172554,#2563eb);color:white;padding:22px max(5%,calc((100% - 1100px)/2));display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-size:30px;font-weight:900;letter-spacing:2px;color:#fbbf24}nav a{color:white;text-decoration:none;margin:0 10px;font-size:14px}
+main{max-width:1100px;margin:auto;padding:28px 18px}.hero{background:white;border-radius:22px;padding:38px;display:grid;grid-template-columns:1.4fr 1fr;gap:20px;align-items:center;box-shadow:0 8px 28px #17255412}
+h1{font-size:clamp(28px,5vw,46px);line-height:1.25;margin:0 0 12px;color:var(--navy)}.hero p{color:#526078}.hero-art{background:#eff6ff;border-radius:18px;padding:28px;text-align:center;font-size:68px}
+.btn{border:0;background:var(--blue);color:white;padding:12px 20px;border-radius:12px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}.btn.alt{background:var(--yellow);color:#172033}
+section{margin-top:30px}.section-title{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}h2{color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.card{background:white;border:1px solid #e7ebf3;border-radius:17px;padding:20px;box-shadow:0 4px 16px #17255408}.card h3{margin:6px 0;color:var(--navy)}.emoji{font-size:30px}.muted{color:#64748b;font-size:14px}
+.word{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #edf0f5;padding:9px 0;gap:10px}.word:last-child{border:0}.spanish{font-weight:bold;color:#1d4ed8;direction:ltr}
+.lesson{background:#fff;border-radius:18px;padding:22px}.progress{height:9px;background:#e5e7eb;border-radius:10px;overflow:hidden}.progress span{display:block;height:100%;background:#22c55e;width:0%;transition:.3s}
+.option{display:block;width:100%;text-align:right;margin:9px 0;background:#f1f5f9;color:#172033;border:2px solid transparent;padding:12px;border-radius:10px;cursor:pointer}.option:hover{border-color:#93c5fd}.option.correct{background:#dcfce7;border-color:#22c55e}.option.wrong{background:#fee2e2;border-color:#ef4444}
+footer{text-align:center;padding:28px;color:#64748b}
+@media(max-width:700px){.hero{grid-template-columns:1fr;padding:24px}.hero-art{font-size:48px}nav{width:100%}nav a{margin:0 5px}}
+</style>
+</head>
+<body>
+<header><div class="logo">VAMOO</div><nav><a href="#courses">الكورسات</a><a href="#words">الكلمات</a><a href="#quiz">اختبر نفسك</a></nav></header>
+<main>
+<div class="hero"><div><div class="muted">ابدأ رحلتك مع اللغة الإسبانية</div><h1>الإسبانية من الصفر…<br>خطوة بخطوة!</h1><p>اتعلّم كلمات وجُمل وقواعد إسبانية بطريقة بسيطة، مع أمثلة واختبارات قصيرة تساعدك تثبّت اللي اتعلمته.</p><a class="btn" href="#courses">ابدأ التعلّم</a> <a class="btn alt" href="#quiz">جرّب اختبارك</a></div><div class="hero-art">🇪🇸 📚<div style="font-size:20px;font-weight:bold;color:#172554">¡Vamos a aprender!</div><small style="font-size:14px;color:#526078">يلا نتعلّم!</small></div></div>
+<section id="courses"><div class="section-title"><h2>مسارات التعلّم</h2><span class="muted">مناسبة للمبتدئين A1</span></div><div class="grid">
+<div class="card"><div class="emoji">🔤</div><h3>الحروف والنطق</h3><p class="muted">تعرّف على الأبجدية الإسبانية وطريقة نطق الحروف.</p><button class="btn" onclick="showLesson('الحروف والنطق','A, B, C, D','ابدأ بسماع شكل الحروف وتكرارها بصوت واضح.')">ابدأ الدرس</button></div>
+<div class="card"><div class="emoji">👋</div><h3>التعارف والتحيات</h3><p class="muted">قول مرحبًا، عرّف بنفسك واسأل عن الحال.</p><button class="btn" onclick="showLesson('التعارف والتحيات','Hola = مرحبًا • Me llamo… = اسمي… • ¿Cómo estás? = كيف حالك؟','مثال: Hola, me llamo Omar. = مرحبًا، اسمي عمر.')">ابدأ الدرس</button></div>
+<div class="card"><div class="emoji">🏠</div><h3>العائلة والبيت</h3><p class="muted">أسماء أفراد العائلة وأشياء البيت.</p><button class="btn" onclick="showLesson('العائلة والبيت','Madre = أم • Padre = أب • Hermano = أخ • Casa = بيت','مثال: Mi familia es pequeña. = عائلتي صغيرة.')">ابدأ الدرس</button></div>
+<div class="card"><div class="emoji">📘</div><h3>القواعد الأساسية</h3><p class="muted">الضمائر وتصريف الأفعال والجمل البسيطة.</p><button class="btn" onclick="showLesson('القواعد الأساسية','Yo = أنا • Tú = أنت • Él = هو • Ella = هي','الفعل ser: Yo soy = أنا أكون، Tú eres = أنت تكون.')">ابدأ الدرس</button></div>
+</div></section>
+<section id="lesson-area" style="display:none"><div class="lesson"><div class="section-title"><h2 id="lesson-title"></h2><button class="btn alt" onclick="document.getElementById('lesson-area').style.display='none'">إغلاق</button></div><p id="lesson-content"></p><p id="lesson-note" class="muted"></p></div></section>
+<section id="words"><h2>كلمات اليوم</h2><div class="card">
+<div class="word"><span>مرحبًا</span><span class="spanish">Hola <button onclick="speak('Hola')" aria-label="استمع">🔊</button></span></div>
+<div class="word"><span>شكرًا</span><span class="spanish">Gracias <button onclick="speak('Gracias')">🔊</button></span></div>
+<div class="word"><span>من فضلك</span><span class="spanish">Por favor <button onclick="speak('Por favor')">🔊</button></span></div>
+<div class="word"><span>نعم / لا</span><span class="spanish">Sí / No <button onclick="speak('Sí. No.')">🔊</button></span></div>
+<div class="word"><span>إلى اللقاء</span><span class="spanish">Adiós <button onclick="speak('Adiós')">🔊</button></span></div>
+</div></section>
+<section id="quiz"><h2>اختبر نفسك</h2><div class="lesson"><div class="section-title"><span id="qcount">السؤال 1 من 5</span><strong id="score">النتيجة: 0</strong></div><div class="progress"><span id="bar"></span></div><h3 id="question" style="margin-top:18px"></h3><div id="answers"></div><p id="feedback" aria-live="polite"></p><button id="next" class="btn" onclick="nextQuestion()" style="display:none">السؤال التالي</button></div></section>
+</main><footer>VAMOO © 2026 — تعلّم الإسبانية بطريقة بسيطة</footer>
+<script>
+function showLesson(title,content,note){document.getElementById('lesson-area').style.display='block';document.getElementById('lesson-title').textContent=title;document.getElementById('lesson-content').textContent=content;document.getElementById('lesson-note').textContent=note;document.getElementById('lesson-area').scrollIntoView({behavior:'smooth'})}
+function speak(t){if('speechSynthesis'in window){let u=new SpeechSynthesisUtterance(t);u.lang='es-ES';speechSynthesis.speak(u)}else alert(t)}
+const questions=[['ما معنى Hola؟',['شكرًا','مرحبًا','وداعًا'],1],['كيف تقول شكرًا بالإسبانية؟',['Gracias','Adiós','Casa'],0],['ما معنى Padre؟',['أم','أخ','أب'],2],['ما معنى Sí؟',['لا','نعم','من فضلك'],1],['كيف تقول إلى اللقاء؟',['Hola','Adiós','Gracias'],1]];
+let qi=0,points=0,answered=false;
+function render(){answered=false;let q=questions[qi];document.getElementById('qcount').textContent=`السؤال ${qi+1} من ${questions.length}`;document.getElementById('question').textContent=q[0];document.getElementById('answers').innerHTML='';document.getElementById('feedback').textContent='';document.getElementById('next').style.display='none';document.getElementById('bar').style.width=(qi/questions.length*100)+'%';q[1].forEach((a,i)=>{let b=document.createElement('button');b.className='option';b.textContent=a;b.onclick=()=>choose(i,b);document.getElementById('answers').appendChild(b)});document.getElementById('score').textContent='النتيجة: '+points}
+function choose(i,b){if(answered)return;answered=true;let correct=questions[qi][2];if(i===correct){points++;b.classList.add('correct');document.getElementById('feedback').textContent='إجابة صحيحة! ممتاز 👏'}else{b.classList.add('wrong');document.getElementById('answers').children[correct].classList.add('correct');document.getElementById('feedback').textContent='مش مشكلة! راجع الإجابة الصحيحة وحاول تاني.'}document.getElementById('score').textContent='النتيجة: '+points;document.getElementById('next').style.display='inline-block';document.getElementById('next').textContent=qi===questions.length-1?'اعرض النتيجة':'السؤال التالي'}
+function nextQuestion(){if(qi<questions.length-1){qi++;render()}else{document.getElementById('question').textContent=`انتهى الاختبار! نتيجتك ${points} من ${questions.length}.`;document.getElementById('answers').innerHTML='';document.getElementById('feedback').textContent=points>=4?'أداء رائع! استمر في التعلّم.':'بداية جيدة، راجع الكلمات وحاول مرة أخرى.';document.getElementById('next').textContent='إعادة الاختبار';document.getElementById('next').onclick=()=>{qi=0;points=0;document.getElementById('next').onclick=nextQuestion;render()};document.getElementById('bar').style.width='100%'}}
+render();
+</script></body></html>
